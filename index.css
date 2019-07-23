@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrap {
+    background-color: rgba(229, 22, 198, .8);
+    padding: 4% 0;
+    width: 900px;
+    max-width: 100%;
+}
+main {
+    background-color: rgb(22, 198, 229);
+}
