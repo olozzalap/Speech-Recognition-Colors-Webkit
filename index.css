@@ -7,7 +7,28 @@
     padding: 4% 0;
     width: 900px;
     max-width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+main, .output-wrap {
+    padding: 24px;
 }
 main {
     background-color: rgb(22, 198, 229);
+}
+h1 {
+    font-family: 'Fascinate', cursive;
+    font-size: 32px;
+    padding: 24px 0;
+    text-align: center;
+}
+.output-wrap {
+    background-color: rgba(108, 117, 110, .8);
+    color: rgb(247, 238, 240);
+}
+
+
+footer {
+    background-color: rgb(22, 229, 198);
+    padding: 32px 32px 32px 8%;
 }
