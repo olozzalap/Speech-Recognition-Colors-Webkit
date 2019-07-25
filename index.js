@@ -39,6 +39,7 @@ const shuffle = (array) => {
     let diagnostic = document.querySelector(".output");
     let bg = document.querySelector("body");
     let hints = document.querySelector(".hints");
+    let overlay = document.querySelector(".speech-overlay");
     let shuffledColors = shuffle(Colors);
     let colorHTML= '';
     shuffledColors.forEach(function(color, index){
@@ -50,7 +51,37 @@ const shuffle = (array) => {
     document.body.onclick = function() {
         recognition.start();
         console.log('Ready to receive a color command.');
+        overlay.style.display = "block";
     }
+
+    recognition.onresult = (event) => {
+        console.warn(event.results);
+        let last = event.results.length - 1;
+        let color = event.results[last][0].transcript;
+        for (let i = 0; i < event.results.length; i++) {
+            let result = event.results[i];
+            console.warn(result);
+            for (let j = 0; j < result.length; j++) {
+                let match = result[j];
+                console.warn(match);
+            }
+        }
+        console.warn(color.split(" ").join(""));
+        diagnostic.textContent = 'Result recieved: ' + color + '.';
+        bg.style.backgroundColor = color.split(" ").join("");
+    };
+    recognition.onspeechend = () => {
+        recognition.stop();
+        overlay.style.display = "none";
+    };
+    recognition.onnomatch = () => {
+        diagnostic.textContent = "No recognition found";
+        overlay.style.display = "none";
+    }
+    recognition.onerror = (event) => {
+        diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
+        overlay.style.display = "none";
+    };
 })();
 
 

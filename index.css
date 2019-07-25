@@ -6,6 +6,7 @@ html, body, .wrap {
 }
 body {
     margin: 0;
+    cursor: pointer;
 }
 
 
@@ -34,6 +35,8 @@ h1 {
 .hints {
     font-style: italic;
     font-weight: 700;
+    max-height: 360px;
+    overflow-y: scroll;
 }
 .hints span {
     display: inline-block;
@@ -74,4 +77,20 @@ footer {
     0% {background-position:0% 50%}
     50% {background-position:100% 25%}
     100% {background-position:0% 50%}
+}
+
+.speech-overlay {
+    display: none;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(127, 127, 127, .5);
+}
+.speech-overlay h1 {
+    padding-top: 50vh;
+    margin-top: 0;
+    line-height: 0;
 }
