@@ -1,28 +1,42 @@
 * {
     box-sizing: border-box;
 }
+html, body, .wrap {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
 
 .wrap {
+    color: rgb(18, 27, 15);
     background-color: rgba(229, 22, 198, .8);
     padding: 4% 0;
+    margin: 0 auto;
     width: 900px;
     max-width: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
-main, .output-wrap {
-    padding: 24px;
-}
 main {
     background-color: rgb(22, 198, 229);
+    padding: 24px 0;
+}
+header {
+    padding: 0 24px;
 }
 h1 {
-    font-family: 'Fascinate', cursive;
-    font-size: 32px;
-    padding: 24px 0;
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 64px;
     text-align: center;
 }
+.description-text {
+    font-style: italic;
+    font-weight: 700;
+}
 .output-wrap {
+    padding: 24px;
     background-color: rgba(108, 117, 110, .8);
     color: rgb(247, 238, 240);
 }
@@ -31,4 +45,27 @@ h1 {
 footer {
     background-color: rgb(22, 229, 198);
     padding: 32px 32px 32px 8%;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 8px;
+}
+.rainbow-text {
+    text-decoration: none;
+    padding-left: 24px;
+    font-size: 32px;
+    position: relative;
+    top: 3px;
+    /* https://w3bits.com/rainbow-text/ */
+    background-image: repeating-linear-gradient(to left, rgb(23, 17, 72), rgb(161, 204, 245), rgb(246, 142, 87), rgb(23, 17, 72), rgb(205, 233, 225), rgb(246, 142, 87));
+    -webkit-background-clip: text;
+    background-size: 800% 800%;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: rainbow 8s ease infinite;
+}
+@keyframes rainbow { 
+    0% {background-position:0% 50%}
+    50% {background-position:100% 25%}
+    100% {background-position:0% 50%}
 }
