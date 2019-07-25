@@ -41,6 +41,7 @@ const shuffle = (array) => {
     let bg = document.querySelector("body");
     let hints = document.querySelector(".hints");
     let overlay = document.querySelector(".speech-overlay");
+    let footer = document.querySelector("footer");
     let shuffledColors = shuffle(Colors);
     let colorHTML= '';
     shuffledColors.forEach(function(color, index){
@@ -53,6 +54,9 @@ const shuffle = (array) => {
         recognition.start();
         console.log('Ready to receive a color command.');
         overlay.style.display = "block";
+    }
+    footer.onclick = function(ev) {
+        ev.stopPropagation();
     }
 
     recognition.onresult = (event) => {
