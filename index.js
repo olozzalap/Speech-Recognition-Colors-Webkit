@@ -18,7 +18,7 @@ const shuffle = (array) => {
 }
 
 (function() {
-    const Colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral', 'AliceBlue', 'AntiqueWhite', 'Aqua', 'Aquamarine', 'Azure', 'Beige', 'Bisque', 'Black', 'BlanchedAlmond', 'Blue', 'BlueViolet', 'Brown', 'BurlyWood', 'CadetBlue', 'Chartreuse', 'Chocolate', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Crimson', 'Cyan', 'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGrey', 'DarkGreen', 'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid', 'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray', 'DarkSlateGrey', 'DarkTurquoise', 'DarkViolet', 'DeepPink', 'DeepSkyBlue', 'DimGray', 'DimGrey', 'DodgerBlue', 'FireBrick', 'FloralWhite', 'ForestGreen', 'Fuchsia', 'Gainsboro', 'GhostWhite', 'Gold', 'GoldenRod', 'Gray', 'Grey', 'Green', 'GreenYellow', 'HoneyDew', 'HotPink', 'IndianRed', 'Indigo', 'Ivory', 'Khaki', 'Lavender', 'LavenderBlush', 'LawnGreen', 'LemonChiffon', 'LightBlue', 'LightCoral', 'LightCyan', 'LightGoldenRodYellow', 'LightGray', 'LightGrey', 'LightGreen', 'LightPink', 'LightSalmon', 'LightSeaGreen', 'LightSkyBlue', 'LightSlateGray', 'LightSlateGrey', 'LightSteelBlue', 'LightYellow', 'Lime', 'LimeGreen', 'Linen', 'Magenta', 'Maroon', 'MediumAquaMarine', 'MediumBlue', 'MediumOrchid', 'MediumPurple', 'MediumSeaGreen', 'MediumSlateBlue', 'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'MidnightBlue', 'MintCream', 'MistyRose', 'Moccasin', 'NavajoWhite', 'Navy', 'OldLace', 'Olive', 'OliveDrab', 'Orange', 'OrangeRed', 'Orchid', 'PaleGoldenRod', 'PaleGreen', 'PaleTurquoise', 'PaleVioletRed', 'PapayaWhip', 'PeachPuff', 'Peru', 'Pink', 'Plum', 'PowderBlue', 'Purple', 'RebeccaPurple', 'Red', 'RosyBrown', 'RoyalBlue', 'SaddleBrown', 'Salmon', 'SandyBrown', 'SeaGreen', 'SeaShell', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue', 'SlateGray', 'SlateGrey', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato', 'Turquoise', 'Violet', 'Wheat', 'White', 'WhiteSmoke', 'Yellow', 'YellowGreen'];
+    const Colors = [ 'Aqua' , 'Azure' , 'Beige', 'Bisque', 'Black', 'Blue', 'Brown', 'Chocolate', 'Coral', 'AliceBlue', 'AntiqueWhite', 'Aqua', 'Aquamarine', 'Azure', 'Beige', 'Bisque', 'Black', 'BlanchedAlmond', 'Blue', 'BlueViolet', 'Brown', 'BurlyWood', 'CadetBlue', 'Chartreuse', 'Chocolate', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Crimson', 'Cyan', 'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGrey', 'DarkGreen', 'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid', 'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray', 'DarkSlateGrey', 'DarkTurquoise', 'DarkViolet', 'DeepPink', 'DeepSkyBlue', 'DimGray', 'DimGrey', 'DodgerBlue', 'FireBrick', 'FloralWhite', 'ForestGreen', 'Fuchsia', 'Gainsboro', 'GhostWhite', 'Gold', 'GoldenRod', 'Gray', 'Grey', 'Green', 'GreenYellow', 'HoneyDew', 'HotPink', 'IndianRed', 'Indigo', 'Ivory', 'Khaki', 'Lavender', 'LavenderBlush', 'LawnGreen', 'LemonChiffon', 'LightBlue', 'LightCoral', 'LightCyan', 'LightGoldenRodYellow', 'LightGray', 'LightGrey', 'LightGreen', 'LightPink', 'LightSalmon', 'LightSeaGreen', 'LightSkyBlue', 'LightSlateGray', 'LightSlateGrey', 'LightSteelBlue', 'LightYellow', 'Lime', 'LimeGreen', 'Linen', 'Magenta', 'Maroon', 'MediumAquaMarine', 'MediumBlue', 'MediumOrchid', 'MediumPurple', 'MediumSeaGreen', 'MediumSlateBlue', 'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'MidnightBlue', 'MintCream', 'MistyRose', 'Moccasin', 'NavajoWhite', 'Navy', 'OldLace', 'Olive', 'OliveDrab', 'Orange', 'OrangeRed', 'Orchid', 'PaleGoldenRod', 'PaleGreen', 'PaleTurquoise', 'PaleVioletRed', 'PapayaWhip', 'PeachPuff', 'Peru', 'Pink', 'Plum', 'PowderBlue', 'Purple', 'RebeccaPurple', 'Red', 'RosyBrown', 'RoyalBlue', 'SaddleBrown', 'Salmon', 'SandyBrown', 'SeaGreen', 'SeaShell', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue', 'SlateGray', 'SlateGrey', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato', 'Turquoise', 'Violet', 'Wheat', 'White', 'WhiteSmoke', 'Yellow', 'YellowGreen'];
     const Grammar = `#JSGF V1.0; grammar Colors; public <Color> = ${Colors.join(' | ')} ;`
 
     var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
@@ -37,6 +37,7 @@ const shuffle = (array) => {
 
 
     let diagnostic = document.querySelector(".output");
+    let outputWrap = document.querySelector(".output-wrap");
     let bg = document.querySelector("body");
     let hints = document.querySelector(".hints");
     let overlay = document.querySelector(".speech-overlay");
@@ -55,20 +56,34 @@ const shuffle = (array) => {
     }
 
     recognition.onresult = (event) => {
-        console.warn(event.results);
         let last = event.results.length - 1;
         let color = event.results[last][0].transcript;
+        color = color.split(" ");
+        let formattedColor = color.map((colorWord) => {
+            colorWord = colorWord[0].toUpperCase() + colorWord.substring(1);
+            return colorWord;
+        });
+        color = formattedColor;
+        color = color.join("");
         for (let i = 0; i < event.results.length; i++) {
             let result = event.results[i];
-            console.warn(result);
             for (let j = 0; j < result.length; j++) {
                 let match = result[j];
-                console.warn(match);
+                console.warn(`Matched speech with word: ${match.transcript} | Confidence ${(match.confidence * 100).toFixed(2)}%`);
             }
         }
-        console.warn(color.split(" ").join(""));
-        diagnostic.textContent = 'Result recieved: ' + color + '.';
-        bg.style.backgroundColor = color.split(" ").join("");
+
+        if (Colors.indexOf(color) > -1) {
+            diagnostic.textContent = 'Matched color: ' + color + '.';
+            console.warn("setting matched color: " + color);
+            bg.style.backgroundColor = color;
+            outputWrap.style.backgroundColor = color;
+        }
+        else {
+            diagnostic.textContent = 'You said: "' + color + '" but no match was found. Try again!';
+            bg.style.backgroundColor = "white";
+            outputWrap.style.backgroundColor = "white";
+        }
     };
     recognition.onspeechend = () => {
         recognition.stop();
@@ -77,10 +92,12 @@ const shuffle = (array) => {
     recognition.onnomatch = () => {
         diagnostic.textContent = "No recognition found";
         overlay.style.display = "none";
+        bg.style.backgroundColor = "white";
     }
     recognition.onerror = (event) => {
         diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
         overlay.style.display = "none";
+        bg.style.backgroundColor = "white";
     };
 })();
 

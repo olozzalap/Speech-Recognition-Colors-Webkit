@@ -1,9 +1,6 @@
 * {
     box-sizing: border-box;
 }
-html, body, .wrap {
-    height: 100%;
-}
 body {
     margin: 0;
     cursor: pointer;
@@ -12,16 +9,14 @@ body {
 
 .wrap {
     color: rgb(18, 27, 15);
-    background-color: rgba(229, 22, 198, .8);
-    padding: 4% 0;
     margin: 0 auto;
-    width: 900px;
+    width: 800px;
     max-width: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
 main {
-    background-color: rgb(22, 198, 229);
+    background-color: rgb(22, 198, 229, .6);
     padding: 24px 0;
 }
 header {
@@ -29,7 +24,7 @@ header {
 }
 h1 {
     font-family: 'Fascinate Inline', cursive;
-    font-size: 64px;
+    font-size: 62px;
     text-align: center;
 }
 .hints {
@@ -42,17 +37,19 @@ h1 {
     display: inline-block;
     padding: 8px;
     margin: 8px;
+}
+.hints span, .output-wrap {
     text-shadow: 1px 1px 1px rgb(247, 238, 240);
 }
 .output-wrap {
     padding: 24px;
-    background-color: rgba(108, 117, 110, .8);
-    color: rgb(247, 238, 240);
+    background-color: rgba(108, 177, 110, .6);
+    /*color: rgb(247, 238, 240);*/
 }
 
 
 footer {
-    background-color: rgb(22, 229, 198);
+    background-color: rgba(229, 22, 198, .6);
     padding: 32px 32px 32px 8%;
     font-size: 24px;
     font-weight: 700;
@@ -88,6 +85,7 @@ footer {
     right: 0;
     bottom: 0;
     background-color: rgba(127, 127, 127, .5);
+    cursor: progress;
 }
 .speech-overlay h1 {
     padding-top: 50vh;
