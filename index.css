@@ -88,7 +88,6 @@ footer {
     cursor: progress;
 }
 .speech-overlay h1 {
-    padding-top: 50vh;
+    padding-top: 38vh;
     margin-top: 0;
-    line-height: 0;
 }
